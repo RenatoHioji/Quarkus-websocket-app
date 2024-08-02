@@ -107,7 +107,7 @@
         if (!connected) {
             let name = $("#name");
             username = name.val();
-            socket = new WebSocket("ws://" + location.host + "/chat/" + username);
+            socket = new WebSocket("wss://" + location.host + "/chat/" + username);
             socket.onopen = function () {
                 connected = true;
                 console.log("Connected to the web socket");
